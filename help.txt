@@ -1,0 +1,43 @@
+$ python3 -m venv venv
+
+$ source venv/bin/activate
+
+$ pip install django
+
+$ pip freeze > requirements.txt
+
+$ mkdir template
+
+$ cd template/
+
+$ django-admin startproject core .
+
+- With virtual environment activated, install dot_env python lib:
+
+$ pip install python-dotenv
+
+- Then, create a .env file and put env variables inside the doc.
+
+- In settings.py...
+
+########################
+
+import os
+
+from dot_env import load_dotenv
+
+load_env()
+
+########################
+
+- On this way, you will be able to use os.getenv('ENV_VARIABLE_NAME') to get any env_variable inside .env...
+
+########################
+
+$ pip install djangorestframework
+
+$ pip install django-cors-headers
+
+$ pip install channels
+
+$ pip install 'uvicorn[standard]'
